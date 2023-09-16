@@ -1,0 +1,1 @@
+<?= $this->extend('templates/register_template'); ?>

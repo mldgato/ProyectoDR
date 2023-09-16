@@ -7,4 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-$routes->get('products/index','ProductController::index');
+/* $routes->get('products/index','ProductController::index'); */
+
+$routes->get('register', 'UserController::register');
+$routes->post('store','UserController::store');

@@ -1,0 +1,20 @@
+CRITICAL - 2023-09-16 15:44:23 --> Invalid file: "templates/register_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/register_template.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/register_template', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\UserController.php(21): view('register')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-16 16:51:31 --> Invalid file: "templates/register_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/register_template.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('templates/register_template', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\UserController.php(21): view('register')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->register()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
