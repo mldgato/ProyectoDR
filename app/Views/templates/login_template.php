@@ -25,21 +25,43 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Inicia Sesión</p>
-                <form action="../../index3.html" method="post">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                <form action="<?php echo base_url('iniciar'); ?>" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email" name="email">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-envelope"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Contraseña">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                    <div class="row">
+                        <div class="col">
+                            <?php if (session('errors.email')) : ?>
+                                <small class="text-danger"><?= session('errors.email') ?></small>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="Contraseña" name="password">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <?php if (session('errors.password')) : ?>
+                                <small class="text-danger"><?= session('errors.password') ?></small>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="row">
@@ -59,6 +81,7 @@
                     </div>
                 </form>
 
+
                 <p class="mb-1">
                     <a href="forgot-password.html">Olvidé mi contraseña</a>
                 </p>
@@ -75,6 +98,8 @@
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?= $this->renderSection('script'); ?>
 </body>
 
 </html>

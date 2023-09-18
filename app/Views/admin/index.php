@@ -1,4 +1,12 @@
-<?= $this->extend('templates/login_template'); ?>
+<?= $this->extend('templates/admin_template'); ?>
+
+<?= $this->section('content-header'); ?>
+
+<?= $this->endSection(); ?>
+
+<?= $this->section('content'); ?>
+
+<?= $this->endSection(); ?>
 
 <?= $this->section('script'); ?>
 <?php
