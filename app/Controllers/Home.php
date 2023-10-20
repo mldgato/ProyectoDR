@@ -12,6 +12,8 @@ class Home extends BaseController
         $this->session = \Config\Services::session();
     }
 
+    protected $filters = ['auth'];
+
     protected $helpers = ['form', 'url'];
     protected $validation;
 
@@ -41,10 +43,10 @@ class Home extends BaseController
                         'user_id'       => $data['id'],
                         'user_name'     => $data['name'],
                         'user_email'    => $data['email'],
-                        'logged_in'     => TRUE
+                        'isLoggedIn'     => TRUE
                     ];
                     $this->session->set($ses_data);
-                    $this->session->setFlashdata('message', 'Usuario registrado exitosamente');
+                    $this->session->setFlashdata('message', 'Bienvenido al sistema');
                     $this->session->setFlashdata('alert-class', 'success');
                     return redirect()->to(site_url('admin/'));
                 } else {
@@ -65,5 +67,11 @@ class Home extends BaseController
     public function dashboard()
     {
         return view('admin/index');
+    }
+
+    public function logout()
+    {
+        $this->session->destroy();
+        return redirect()->to('/');
     }
 }

@@ -21,9 +21,9 @@
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown user-menu">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    <a href="<?php echo base_url('logout'); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">
                         <span>
-                            Manuel Dardón
+                            <?= $_SESSION['user_name']; ?>
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

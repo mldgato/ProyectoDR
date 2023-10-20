@@ -24,6 +24,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'authGuard' => \App\Filters\AuthGuard::class,
     ];
 
     /**
@@ -66,5 +67,12 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+
+    /* public array $filters = []; */
+
+    public array $filters = [
+        'AuthGuard' => \App\Filters\AuthGuard::class, // Si has creado un filtro personalizado
+        // O usar el filtro de autenticación predeterminado
+        'auth' => \CodeIgniter\Filters\Auth::class,
+    ];
 }
